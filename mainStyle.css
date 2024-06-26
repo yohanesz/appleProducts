@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+  html {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  * {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    list-style-type: none;
+  }
+
+  body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9fc;
+  border-bottom: 1px solid #6c6c6d52;
+  }
+
+  .nav-endItems .store{
+    margin-left: 37px;
+  }
+
+  nav {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+      display: flex;
+      width: 980px;
+      align-items: center;
+      cursor: pointer;
+      font-size: small;
+      justify-content: space-between;  
+  }
+
+  
+
+  .firstContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f5f5f7;
+    height: 47.3%;
+  }
+
+  .imgContent {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 48px;
+    padding: 10rem 0 4rem 0;
+  }
+
+  .containerContent {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+
+    img {
+        /* padding-top: 7rem; */
+        max-width: 39rem;
+    }
+
+    h1, p {
+        padding: 8px 0px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+   
+  }
+
+  .textContent, .imgContent {
+    padding: 0 20px 0 20px;
+  }
+
+  #visualizacao {
+    border-radius: 20px
+  }
+
+  .panel {
+    color: black;
+    margin-top: 20px;
+    transition: transform 0.8s ease, opacity 0.3s ease;
+    opacity: 0.2; /* Opacidade menor para os painéis não ativos */
+    width: 540px;
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    flex-direction: column;
+    border: none;
+    border-radius: 20px; /* Adicionando bordas arredondadas */
+    overflow: hidden; /* Garantindo que a imagem não ultrapasse as bordas arredondadas */
+    background-color: #f5f3f7; /* Cor de fundo dos painéis */
+
+
+    & img {
+      width: 14rem;
+      margin-bottom: 40px;
+    }
+
+    & h3 {
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 18px;
+      color: rgb(115, 164, 255);
+    }
+
+    
+  }
+
+  
+  .carousel {
+
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Largura total do carrossel - 4 painéis * 1100px */
+    margin-bottom: 200px;
+  }
+  
+  
+  .panel.active {
+    width: 540px; 
+    opacity: 1; 
+    cursor: pointer;
+    transform: scale(1.1);
+    
+  }
+
+  .panel.active:hover {
+    transform: scale(1.2,1.2);
+  }
+  
+  
+  
+  .panel:hover:not(.active) {
+    opacity: 0.6;
+  }
+
+  .content {
+    padding: 20px;
+  }
+  
+  button {
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+    margin: 0px 40px;
+    font-size: 24px;
+    background-color: #dedee2; /* Cor de fundo das setas de navegação */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    filter: opacity(40%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.thirdItems {
+  display: grid;
+  grid-template-columns: repeat(3, 5fr);
+  gap: 5rem;
+  margin-bottom: 15rem;
+}
+
+.thirdItems .items {
+  background-color: #f6f5f8;
+  width: 25rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.8s ease, opacity 0.3s ease;
+}
+
+.thirdItems .items:hover {
+  transform: scale(1.1,1.1);
+ 
+}
+
+.items a {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.items h3 {
+  color: black;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+.items p {
+ color: black;
+ font-size: 15px;
+}
+
+.img1 {
+  width: 14rem;
+}
+
+.img2 {
+  width: 15rem;
+}
+
+.img3 {
+  width: 14rem;
+}
+
+@media screen and (max-width: 767px) {
+    
+  button {
+    top: 65rem;
+  }
+
+  nav {
+      width: 100%;
+      & .li {
+          display: none;
+      }
+      & li {
+          padding: 2px 20px;
+      }
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .nav-endItems svg {
+    margin-left: 20px;
+  }
+  
+  .firstContainer {
+    height: 420px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .firstContainer h1{
+    font-size: 35px;
+    padding-top: 2rem;
+  }
+
+  .firstContainer img {
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+ .containerContent {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .firstContainer p, a {
+    display: flex;
+    font-size: 16px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+  
+  .carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .panel{
+    width: 100%;
+    display: none;
+    border-radius: 0px;
+
+  }
+
+  .panel.active {
+    display: flex;
+    width: 395px;
+  }
+
+  
+
+  .thirdItems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 15rem;
+
+    & .items {
+      width: 100%;
+      height: 18rem;
+    }
+
+    .img1, .img2, .img3 {
+      width: 8rem;
+    }
+  }
+
+  .items h3 {
+    font-size: 20px;
+  }
+
+  .items p {
+    font-size: 15px;
+  }
+
+  
+}
