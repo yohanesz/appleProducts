@@ -64,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('1-cor').checked = false;
       document.getElementById('titulo-produto').textContent = selectedName;
       document.getElementById('preco').textContent = '$' + selectedPrice;
-      document.getElementById('preco-parcelado').textContent = 'Em até 12x de $' + selectedPrice / 12;
+      const price = selectedPrice/12;
+      document.getElementById('preco-parcelado').textContent = `Em até 12x de $${Math.round(price)}`;
       document.getElementById('a-vista').textContent = '$' + (selectedPrice - ((selectedPrice * 10) /100)) + ' à vista (10% de desconto)';
 
  } else {

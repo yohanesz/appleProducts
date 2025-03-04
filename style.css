@@ -79,6 +79,9 @@ main {
 }
 
 .precos {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   margin: 0.875rem 0 0;
   padding: 0 0 0.625rem;
   font-size: 1.1rem;

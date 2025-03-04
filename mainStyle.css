@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
   }
 
   header {
@@ -182,7 +183,7 @@
   
   button {
     position: absolute;
-    top: 85%;
+    top: 95%;
     transform: translateY(-50%);
     margin: 0px 40px;
     font-size: 24px;
@@ -193,6 +194,11 @@
     cursor: pointer;
     border-radius: 50%;
     filter: opacity(40%);
+}
+
+.precos {
+  display: flex;
+  gap:20px
 }
 
 .prev {
